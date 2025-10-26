@@ -2,6 +2,23 @@
 
 ## Project 2 for CSCE3550. 
 
+Environment:
+
+Language: Python 3.13.2
+
+Frameworks/Libraries:
+
+Flask (web framework)
+PyJWT (JWT signing and verification)
+cryptography (RSA key generation and serialization)
+SQLite3 (built-in Python module for database)
+pytest, pytest-cov, and coverage (testing and coverage)
+flake8 (linting)
+requests (used for test interactions if needed)
+
+Tested On: macOS (should work on any OS with Python 3 support)
+
+
 How to run:
 
 1. Setup Virtual Environment: python3 -m venv venv (or python)
