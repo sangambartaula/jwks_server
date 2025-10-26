@@ -1,5 +1,6 @@
 # jwks_server
-Project 1 for CSCE3550. 
+
+## Project 2 for CSCE3550. 
 
 How to run:
 
@@ -23,20 +24,25 @@ Press CTRL+C to quit
 
 This means the app is up and running.
 
-How to test it?
+How to test it against test client?
 1. Install this: https://github.com/jh125486/CSCE3550
 2. Unzip it
 3. Drag the files into a folder in your working directory
 4. Open up a second terminal
 5. Navigate to the correct directory (should be a directory inside of the working one. So a directory on the same level as app.py)
-6. Run: go run main.go project1
+6. Run: go run main.go project2
 
+
+How to check coverage?
+1. Run: coverage run -m pytest test_app.py
+2. View the coverage report by doing coverage report -m
 
 
 This project was made with the help of AI. I have included the prompts for you below.
 
 First I provided the instructions from Canvas. Then I asked the following:
-- Given these instructions, what libraries are crucial for this project? What should I have before I start? (for python)
-- How would you begin to implement this? Show me the app.py file you would use for this.
-- What is a PEM Format String?
-- Help me setup a test suite for my program
+- Here’s my current app.py from Project 1. Add SQLite support to my JWKS server. Create totally_not_my_privateKeys.db and the keys table using safe parameterized queries.
+- On startup, check if the DB is empty. If so, insert one expired key and one valid key (1 hour expiry). Serialize them as PEM before saving.
+- Update POST:/auth to read a key from the DB (expired or valid based on query param), sign a JWT, and return it.
+- Implement GET:/.well-known/jwks.json to return all valid (non-expired) public keys as a JWKS response.
+- Write pytest tests to confirm DB exists, JWT signing works (valid and expired), and JWKS returns correct keys.
