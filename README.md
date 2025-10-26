@@ -46,3 +46,5 @@ First I provided the instructions from Canvas. Then I asked the following:
 - Update POST:/auth to read a key from the DB (expired or valid based on query param), sign a JWT, and return it.
 - Implement GET:/.well-known/jwks.json to return all valid (non-expired) public keys as a JWKS response.
 - Write pytest tests to confirm DB exists, JWT signing works (valid and expired), and JWKS returns correct keys.
+
+I made use of Co-Pilot (Claude Haiku 4.5) for this assignment. It was able to access my repo since its in GitHub and so it had the full context of all my previous files. I did not have to upload them. It was able to respond with code very fast and I was able to test it and fix any errors it made, which suprisingly was very little. I double checked the work myself and also used other AI to cross check its work. 
