@@ -21,6 +21,7 @@ Tested On: macOS (should work on any OS with Python 3 support)
 
 How to run:
 
+Make sure you are in the correct working directory. If not cd to it.
 1. Setup Virtual Environment: python3 -m venv venv (or python)
 2. Activate it: source venv/bin/activate
 3. Then run: pip install -r requirements.txt
@@ -44,9 +45,9 @@ This means the app is up and running.
 How to test it against test client?
 1. Install this: https://github.com/jh125486/CSCE3550
 2. Unzip it
-3. Drag the files into a folder in your working directory
+3. Drag the files (go.mod, go.sum, main.go) into your working directory (inside jwks_server)
 4. Open up a second terminal
-5. Navigate to the correct directory (should be a directory inside of the working one. So a directory on the same level as app.py)
+5. Navigate to the correct directory
 6. Run: go run main.go project2
 
 
